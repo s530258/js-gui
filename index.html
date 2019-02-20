@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Interactive App</title>
+  <title>Competition Estimator</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -19,15 +19,15 @@
     <h3>Right-click / Inspect, then select console</h3>
 
     <p>Enter your name:
-      <input id="guest" type="text" value="Eden">
+      <input id="guest" type="text" value="">
     </p>
 
-    <p>Enter first number:
-      <input id="firstNumber" type="number" value="7">
+    <p>Input a number of students:
+      <input id="firstNumber" type="number" value="0">
     </p>
 
-    <p>Enter second number:
-      <input id="secondNumber" type="number" value="12">
+    <p>Enter a number of positions:
+      <input id="secondNumber" type="number" value="0">
     </p>
 
     <button id="clicker" class="btn btn-primary">Click me!</button>
@@ -41,10 +41,10 @@
 
     console.log('Declare testable functions.....................')
 
-    function add(x, y) {
-      return x + y
+    function studentsPer(x, y) {
+      return x / y
     }
-    console.log('Defined add=' + add)
+  
 
     console.log('Declare event listeners .......................')
 
@@ -54,7 +54,7 @@
       console.log('i=' + i)
       const j = parseInt(document.getElementById('secondNumber').value)
       console.log('j=' + j)
-      const ans = s + ', your sum is ' + add(i, j) + '.'
+      const ans = s + ', the number of students per position is ' + studentsPer(i, j) + '.'
       document.getElementById('result').innerHTML = ans
     })
 
